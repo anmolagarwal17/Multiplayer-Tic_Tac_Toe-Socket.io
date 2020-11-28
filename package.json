@@ -2,14 +2,19 @@
   "name": "multiplayer-tic_tac_toe-socket.io",
   "version": "1.0.0",
   "description": "My first socket.io app - multiplayer tic-tac-toe",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "Anmol Agarwal <anmolagarwal170@gmail.com> (https://anmolagarwal.netlify.app/)",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
