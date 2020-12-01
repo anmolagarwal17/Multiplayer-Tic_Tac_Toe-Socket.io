@@ -26,25 +26,52 @@
 <body>
 
     <!-- nav bar -->
-    <nav class="navbar sticky-top navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-dark bg-dark" id="b">
         <a class="navbar-brand" href="#">
             Share Unlimited
         </a>
     </nav>
 
-    <div class="container-fluid h-85">
-        <div class="row h-100">
-            <a href="./send" class="col-sm bg-primary text-white text-decoration-none h-100 text-center display-4">
-                <!-- TODO: set this element's lineheight equal to it's height using JS -->
-                SEND
-            </a>
-            <a href="./receive" class="col-sm bg-success text-white text-decoration-none h-100 text-center display-4">
-                <!-- TODO: set this element's lineheight equal to it's height using JS -->
-                RECEIVE
-            </a>
+    <div class="container-md h-85 p-5" id="a">
+        <div class="row">
+            <div class="card">
+                <div class="card-body" id="room">
+                    This is some text within a card body.
+                </div>
+            </div>
+            <!-- <div class="card w-100">
+                <div class="card-body py-2 px-3">
+                    <h5 class="card-title mb-1">Card title</h5>
+                    <div class="d-flex justify-content-between">
+                        <span>f</span>
+                        <span>f</span>
+                        <span>f</span>
+                    </div>
+                    <div class="progress mt-2">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 
+
+
+
+
+
+
+    <script>
+        document.querySelector('#b').addEventListener('click', function (e) {
+            document.querySelector('#a').innerHTML = `${document.querySelector('#a').innerHTML}<div class="alert alert-dark alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>`
+        })
+    </script>
     <footer class="footer">
         <div class="container">
             some custom text
