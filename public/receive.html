@@ -32,6 +32,12 @@
         </a>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <video id="video"></video>
+        </div>
+    </div>
+
     <div class="container-fluid h-85">
         <div class="row h-100">
             <a href="./send" class="col-sm bg-primary text-white text-decoration-none h-100 text-center display-4">
@@ -61,7 +67,11 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
     </script>
     <script src="../socket.io/socket.io.js"></script>
-    <script src="./index.js" defer]></script>
+    <!-- <script src="./index.js" defer]></script> -->
+    <script>
+        const video = document.querySelector('#video');
+        const socket = io();
+    </script>
 </body>
 
 </html>

@@ -13,6 +13,8 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
+    "generate-password": "^1.5.1",
+    "namor": "^2.0.2",
     "socket.io": "^3.0.3"
   },
   "devDependencies": {

@@ -32,6 +32,19 @@
         </a>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <form action="/send" class="form-horizontal" method="POST">
+                <input type="text" name="name">
+                <input type="text" name="password">
+                <input type="submit" value="submit" class="btn btn-primary">
+            </form>
+        </div>
+        <div class="row">
+            <form action="/receive"></form>
+        </div>
+    </div>
+
     <div class="container-fluid h-85">
         <div class="row h-100">
             <a href="./send" class="col-sm bg-primary text-white text-decoration-none h-100 text-center display-4">

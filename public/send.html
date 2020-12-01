@@ -34,6 +34,12 @@
 
     <div class="container-md h-85 p-5" id="a">
         <div class="row">
+            <div>
+                <form action="#" method="get" id="form">
+                    <input type="file" name="file" id="file">
+                    <input type="submit" value="submit" id="submit" />
+                </form>
+            </div>
             <div class="card">
                 <div class="card-body" id="room">
                     This is some text within a card body.
@@ -88,7 +94,92 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
     </script>
     <script src="../socket.io/socket.io.js"></script>
-    <script src="./index.js" defer]></script>
+    <!-- <script src="./index.js" defer]></script> -->
+
+    <script>
+        const form = document.getElementById('form');
+        const files = document.getElementById('file');
+        const submit = document.getElementById('submit');
+        let socket = io();
+
+
+
+
+        socket.emit('msgg', 'hello')
+
+
+
+        // Message submit
+        form.addEventListener('submit', e => {
+
+
+            // const toBase64 = file => new Promise((resolve, reject) => {
+            //     const reader = new FileReader();
+            //     reader.readAsDataURL(file);
+            //     reader.onload = () => resolve(reader.result);
+            //     reader.onerror = error => reject(error);
+            // });
+            // file = files.files[0]
+            // async function Main() {
+            //     const file = files.files[0];
+            //     console.log(await toBase64(file));
+            //     const data = await toBase64(file);
+            //     socket = io();
+            //     socket.emit('sendFile', data);
+            // }
+
+            e.preventDefault();
+            socket.emit('send', files.files[0]);
+            // Main();
+            // var file = files.files[0]
+
+            // var reader = new FileReader();
+            // var fileByteArray = [];
+            // reader.readAsArrayBuffer(file);
+            // socket.emit('msgg', 'after')
+            // let fileData;
+            // reader.onload = function (evt) {
+            // socket = io();
+            // if (evt.target.readyState == FileReader.DONE) {
+            //     var arrayBuffer = evt.target.result,
+            //         array = new Uint8Array(arrayBuffer);
+            //     for (var i = 0; i < array.length; i++) {
+            //         fileByteArray.push(array[i]);
+            //     }
+            // }
+            // reader.readAsDataURL(file);
+            // console.log(reader.result);
+            // fileData = reader.result;
+            // alert('ad');
+
+            // file = {
+            //     data: fileData,
+            //     type: 'video'
+            // }
+            // console.log(file)
+            // // sending file to server
+            // socket.emit('sendFile', file);
+            // }
+            // socket.emit('sendFile', file);
+
+            // console.log(fileByteArray);
+
+            // var b64;
+            // var file = files.files[0],
+            //     reader = new FileReader();
+
+
+            // reader.onloadend = function () {
+            //     // Since it contains the Data URI, we should remove the prefix and keep only Base64 string
+            //     console.log('dsfa');
+            //     b64 = reader.result.replace(/^data:.+;base64,/, '');
+            //     console.log(b64);
+            // };
+
+
+        });
+    </script>
+
 </body>
 
 </html>
